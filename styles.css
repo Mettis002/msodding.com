@@ -1,0 +1,317 @@
+/* ── Design tokens ─────────────────────────────────────────── */
+:root {
+  --bg:          #F7EDD8;
+  --primary:     #2A1F12;
+  --secondary:   #5C4A35;
+  --tertiary:    #9A8770;
+  --border:      #D4C7AE;
+
+  --font-serif:  'Lora', Georgia, serif;
+  --font-sans:   'DM Sans', system-ui, sans-serif;
+
+  --max-w:       640px;
+  --section-py:  5.5rem;
+
+  --transition:  0.2s ease;
+}
+
+/* ── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Layout ────────────────────────────────────────────────── */
+.content {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+section {
+  padding-block: var(--section-py);
+}
+
+/* ── Scroll fade-in ────────────────────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Shared labels ─────────────────────────────────────────── */
+.eyebrow,
+.tradition-label {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tertiary);
+  margin-bottom: 1.25rem;
+}
+
+/* ── Divider ───────────────────────────────────────────────── */
+.divider {
+  width: 60px;
+  height: 1px;
+  background: var(--border);
+  margin: 3rem auto;
+}
+
+/* ── 1. Hero ───────────────────────────────────────────────── */
+.hero {
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.book-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 7vw, 3.6rem);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--primary);
+  margin-bottom: 0.6rem;
+}
+
+.book-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--secondary);
+  margin-bottom: 2rem;
+}
+
+.author-name {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--tertiary);
+  margin-top: 1.5rem;
+}
+
+.svg-motif {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* ── 2. Filosofisch minimalisme ────────────────────────────── */
+.philosophy-intro {
+  padding-block: 0 var(--section-py);
+  text-align: center;
+}
+
+.philosophy-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+/* ── 3. Spinoza introductie ────────────────────────────────── */
+.spinoza-intro .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.spinoza-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.spinoza-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--secondary);
+  border-left: 2px solid var(--border);
+  padding-left: 1.5rem;
+  margin-left: 2rem;
+  quotes: none;
+}
+
+.intro-text {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--secondary);
+}
+
+@media (max-width: 480px) {
+  .spinoza-quote {
+    margin-left: 1rem;
+  }
+}
+
+.spinoza-attr {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--tertiary);
+  text-align: right;
+}
+
+/* ── 4. Māori ──────────────────────────────────────────────── */
+.maori {
+  padding-block: var(--section-py);
+}
+
+.maori-content {
+  max-width: 880px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.maori-anecdote {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.anecdote-text {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: var(--secondary);
+}
+
+.aphorism-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--primary);
+  quotes: none;
+}
+
+@media (max-width: 768px) {
+  .maori-content {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .maori-aphorism {
+    margin-top: 2.5rem;
+    padding-left: 1.25rem;
+    border-left: 1px solid var(--border);
+  }
+  .aphorism-text {
+    font-size: 1.15rem;
+  }
+}
+
+/* ── 5. Reisregel ──────────────────────────────────────────── */
+.travel-line {
+  padding-block: 0 var(--section-py);
+  text-align: center;
+}
+
+.travel-text {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--tertiary);
+  letter-spacing: 0.01em;
+}
+
+/* ── 6 + 7. Download ───────────────────────────────────────── */
+.download {
+  border-top: 1px solid var(--border);
+  padding-block: var(--section-py);
+}
+
+.download-intro {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--secondary);
+  line-height: 1.8;
+  margin-bottom: 2.25rem;
+}
+
+.btn-download {
+  display: block;
+  width: 100%;
+  background: var(--primary);
+  color: var(--bg);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 1.1rem 2rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+.btn-download:hover { opacity: 0.88; }
+
+.contact-line {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+
+.contact-label {
+  color: var(--tertiary);
+  margin-right: 0.3em;
+}
+
+.contact-email {
+  color: var(--secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color var(--transition);
+}
+.contact-email:hover { color: var(--primary); }
+
+/* ── 8. Footer ─────────────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--tertiary);
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  :root { --section-py: 4rem; }
+  .book-title { font-size: 2.2rem; }
+}
