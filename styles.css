@@ -229,34 +229,75 @@ section {
   }
 }
 
-/* ── 5. Reisregel ──────────────────────────────────────────── */
-.travel-line {
-  padding-block: 0 var(--section-py);
-  text-align: center;
-}
-
-.travel-text {
-  font-family: var(--font-sans);
-  font-weight: 300;
-  font-style: italic;
-  font-size: 0.9rem;
-  color: var(--tertiary);
-  letter-spacing: 0.01em;
-}
-
-/* ── 6 + 7. Download ───────────────────────────────────────── */
-.download {
+/* ── 5. Werk ───────────────────────────────────────────────── */
+.werk {
   border-top: 1px solid var(--border);
   padding-block: var(--section-py);
 }
 
-.download-intro {
+.werk-kop {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tertiary);
+  margin-bottom: 2.5rem;
+}
+
+.werk-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.werk-item--binnenkort {
+  opacity: 0.5;
+}
+
+.werk-titel {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  color: var(--primary);
+}
+
+.werk-titel--hoofd {
+  font-size: 1.15rem;
+}
+
+.werk-context {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--secondary);
+}
+
+.werk-lengte {
   font-family: var(--font-sans);
   font-weight: 300;
-  font-size: 0.95rem;
-  color: var(--secondary);
-  line-height: 1.8;
-  margin-bottom: 2.25rem;
+  font-size: 0.78rem;
+  color: var(--tertiary);
+  letter-spacing: 0.02em;
+}
+
+.werk-delen {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: var(--tertiary);
+  letter-spacing: 0.03em;
+}
+
+.werk-binnenkort {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tertiary);
 }
 
 .btn-download {
@@ -269,15 +310,52 @@ section {
   font-size: 0.9rem;
   letter-spacing: 0.04em;
   text-align: center;
-  padding: 1.1rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 2px;
   text-decoration: none;
+  margin-top: 0.6rem;
   transition: opacity var(--transition);
 }
 .btn-download:hover { opacity: 0.88; }
 
+/* ── 6. Donatie ────────────────────────────────────────────── */
+.donatie {
+  border-top: 1px solid var(--border);
+  padding-block: var(--section-py);
+}
+
+.donatie-tekst {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--secondary);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.btn-steun {
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: var(--primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  border: 1px solid var(--secondary);
+  text-decoration: none;
+  transition: border-color var(--transition), color var(--transition);
+}
+.btn-steun:hover {
+  border-color: var(--tertiary);
+  color: var(--tertiary);
+}
+
 .contact-line {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   text-align: center;
   font-family: var(--font-sans);
   font-weight: 300;
