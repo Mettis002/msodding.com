@@ -143,8 +143,14 @@ section {
 }
 
 @media (max-width: 768px) {
+  .landing {
+    min-height: auto;
+    align-items: flex-start;
+    padding-block: 1.5rem 2rem;
+  }
   .landing .split-content {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   .landing .split-media {
     align-self: auto;
@@ -154,10 +160,13 @@ section {
   }
   .landing .split-media img {
     width: 100%;
-    max-width: 320px;
+    max-width: 220px;
     box-shadow:
       0 20px 36px -16px rgba(42, 31, 18, 0.3),
       0 8px 16px -8px rgba(42, 31, 18, 0.14);
+  }
+  .landing .landing-name {
+    margin-bottom: 1rem;
   }
 }
 
