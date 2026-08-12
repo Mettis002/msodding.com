@@ -111,11 +111,26 @@ section {
 
 .landing .split-content {
   text-align: left;
-  gap: 3rem;
+  grid-template-columns: 1fr 370px;
+  gap: 2.3rem;
+}
+
+.landing .split-media img {
+  width: 370px;
 }
 
 .landing .landing-name {
-  margin-bottom: 3rem;
+  margin-bottom: 2.3rem;
+}
+
+@media (max-width: 768px) {
+  .landing .split-content {
+    grid-template-columns: 1fr;
+  }
+  .landing .split-media img {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 .landing-links {
