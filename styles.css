@@ -364,6 +364,10 @@ section {
   gap: 1rem;
 }
 
+.mt-extra {
+  margin-top: 1rem;
+}
+
 /* ── Split content (tekst + beeld, zie Māori-sectie) ─────────── */
 .split-content {
   max-width: 880px;
