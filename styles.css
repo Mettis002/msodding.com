@@ -221,6 +221,11 @@ section {
   text-align: center;
 }
 
+.hero--compact {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
 .book-title {
   font-family: var(--font-serif);
   font-weight: 400;
