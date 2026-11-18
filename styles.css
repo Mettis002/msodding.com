@@ -552,6 +552,33 @@ section {
 }
 .btn-download:hover { opacity: 0.88; }
 
+/* ── Gedichten ─────────────────────────────────────────────── */
+.gedicht-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gedicht-media {
+  width: 100%;
+  max-width: 320px;
+}
+
+.gedicht-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.gedicht-prijzen {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
 /* ── 6. Donatie ────────────────────────────────────────────── */
 .donatie {
   border-top: 1px solid var(--border);
